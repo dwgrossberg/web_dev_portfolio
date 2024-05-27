@@ -1,0 +1,533 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+/*   ----- Imports  -----  */
+/* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */
+/* @import "component1.css";   Component-specific stylesheets, if any.   */
+/* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Space+Mono&display=swap");
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+/*   ----- Variables  -----  */
+:root {
+  --cream: rgba(254, 251, 247, 0.7);
+  --dark-cyan: rgba(90, 98, 115, 0.9);
+  --gold: rgba(242, 237, 167, 0.9);
+  --clay: rgba(193, 156, 137, 1);
+  --midnight: rgba(13, 13, 13, 1);
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {
+  /* Can alternatively define in html {}. */
+  background-image: url(../public/images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--midnight);
+  font-family: "Quicksand", sans-serif;
+  margin: 5% 5%;
+  padding: 5%;
+  min-width: 300px;
+  max-width: 1500px;
+  line-height: 1.5em;
+}
+#staffBody {
+  min-width: 960px;
+}
+/*  ----- Page layout blocks -----  */
+header {
+  background-color: var(--dark-cyan);
+  color: var(--gold);
+  border-radius: 5px;
+  padding: 5em 3em;
+  margin: 1.4em 0;
+  border-style: double;
+  border-width: 3px;
+  border-color: var(--midnight);
+}
+header img {
+  width: 1.4em;
+}
+main {
+  background-color: var(--cream);
+  padding: 3em 3em;
+  border-radius: 5px;
+  margin: 5% 0;
+}
+section {
+}
+article {
+}
+#topic1 {
+}
+#topic2 {
+}
+div {
+}
+aside {
+  width: 250px;
+  margin: 0 20px 10px 10px;
+  padding: 20px;
+  border: 1px dashed var(--clay);
+  border-radius: 3px;
+  color: var(--cream);
+  background-color: var(--dark-cyan);
+  float: right;
+}
+#fetchStaff {
+  margin: 40px;
+}
+footer {
+  font-size: large;
+  color: var(--cream);
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----- Anchors ----- Text links */
+a {
+  text-decoration: none;
+  color: var(--dark-cyan);
+}
+a:link {
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+}
+a:visited {
+}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: -45px 0 2em 0;
+}
+nav a {
+  padding: 10px 5%;
+  text-decoration: none;
+  background-color: var(--clay);
+  font-size: 1em;
+  border-radius: 5px;
+  margin: 1% 2%;
+  border-style: double;
+  border-width: 3px;
+  border-color: var(--midnight);
+  color: var(--cream);
+}
+nav a:hover {
+  color: var(--gold);
+}
+nav a:active {
+  color: var(--midnight);
+}
+.local {
+  margin: 0;
+}
+.local a {
+  background-color: var(--cream);
+  font-size: 1em;
+  margin: 0;
+  border: none;
+  color: var(--dark-cyan);
+  font-weight: 600;
+  padding: 0 3%;
+  margin: 1% 2%;
+}
+.local a:hover {
+  color: var(--clay);
+}
+.local a:active {
+  color: var(--midnight);
+}
+.top {
+  color: var(--dark-cyan);
+  text-decoration: none;
+}
+/*  -----  Typography  ----- */
+p {
+}
+br {
+}
+ol,
+ul,
+dl {
+}
+li {
+}
+dt {
+}
+dd {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Mono", monospace;
+}
+h1 {
+  font-family: "Space Mono", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2.5em;
+  margin: -10px 0 10px 0;
+  line-height: 1em;
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+
+abbr {
+}
+acronym {
+}
+address {
+}
+blockquote {
+}
+q {
+}
+cite {
+}
+em {
+}
+hr {
+}
+mark {
+}
+s {
+}
+span {
+}
+strong {
+}
+sub {
+}
+sup {
+}
+time {
+}
+
+/*  ----- Coding or instructional typography ----- */
+pre {
+}
+code {
+}
+kbd {
+}
+samp {
+}
+var {
+}
+del {
+}
+ins {
+}
+
+/*  ----- Table ----- */
+table {
+  border-collapse: collapse;
+  color: var(--midnight);
+  margin-bottom: 20px;
+  display: block;
+}
+caption {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+thead {
+  background-color: var(--midnight);
+  color: var(--cream);
+}
+tbody {
+}
+tbody th {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+}
+tfoot {
+}
+tr,
+td {
+  padding: 10px;
+}
+tr:nth-child(even) {
+  background-color: var(--cream);
+}
+th {
+  padding: 10px 5px;
+}
+td {
+}
+td:nth-child(1) {
+}
+colgroup {
+}
+data {
+}
+datalist {
+}
+tr td {
+  border-bottom: 1px solid var(--clay);
+}
+#quantity {
+  width: 50px;
+}
+table img {
+  height: 48px;
+  border: 1px solid var(--clay);
+}
+.quantityTD {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*  ----- Form ----- */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+fieldset {
+  margin: 30px 10px;
+  padding: 20px;
+  border-radius: 3px;
+  border: 0.5px solid var(--dark-cyan);
+  min-width: 25%;
+}
+legend {
+  font-size: 22px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  color: var(--dark-cyan);
+}
+label {
+  color: var(--midnight);
+  display: block;
+}
+button {
+  padding: 11px 21px;
+  background-color: var(--gold);
+  color: var(--midnight);
+  border: 1px solid var(--dark-cyan);
+  border-radius: 3px;
+  font-size: 20px;
+  margin: auto 30%;
+  cursor: pointer;
+}
+button:active {
+  background-color: var(--midnight);
+  color: var(--gold);
+}
+button:hover {
+  padding: 9px 19px;
+  border: 3px double var(--dark-cyan);
+}
+input,
+textarea {
+  margin: 10px;
+  padding: 5px 10px;
+  border: 0.5px solid var(--dark-cyan);
+  border-radius: 3px;
+  color: var(--midnight);
+  font-family: inherit;
+}
+input:invalid,
+textarea:invalid {
+  border: 2px solid red;
+}
+input:valid,
+textarea:valid {
+  border: 2px solid green;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: var(--gold);
+  outline: none;
+  border-width: 2px;
+  color: var(--midnight);
+}
+select,
+option {
+  padding: 3px;
+  border: 0.5px solid var(--dark-cyan);
+  border-radius: 3px;
+  color: var(--midnight);
+  font-family: inherit;
+}
+optgroup {
+}
+option {
+}
+.textComments {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+textarea {
+  width: 95%;
+  height: 50px;
+  margin: 5px 0;
+  line-break: auto;
+}
+output {
+}
+meter {
+}
+progress {
+}
+
+/* ----- Media ----- */
+figure {
+  border: 2px solid var(--gold);
+}
+figcaption {
+}
+figure img {
+}
+svg {
+}
+picture {
+}
+source {
+}
+iframe {
+}
+video {
+}
+audio {
+}
+embed {
+}
+object {
+}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.galleryHeading {
+  color: var(--cream);
+}
+.gallery figure {
+  width: 350px;
+  background-color: var(--cream);
+  padding: 15px 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery img {
+  width: 100%;
+}
+.gallery figcaption {
+  padding: 10px 0 0 0;
+}
+.floatright {
+}
+.floatleft {
+}
+.center-middle {
+}
+
+.ten {
+}
+.twenty {
+}
+.thirty {
+}
+.forty {
+}
+.fifty {
+}
+.sixty {
+}
+.seventy {
+}
+.eighty {
+}
+
+.radius {
+}
+.circle {
+}
+.boxshadow {
+}
+.tshadow {
+}
+.gradient {
+}
+.shape {
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.techStack dt {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.techStack dt strong {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+@keyframes App-logo {
+}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {
+}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {
+}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {
+}
+
+@media (width <= 400px) {
+  h1 img {
+    position: relative;
+    top: -50px;
+    left: -50px;
+  }
+  .local a {
+    font-size: 0.8em;
+  }
+}

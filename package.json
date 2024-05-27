@@ -1,0 +1,25 @@
+{
+  "name": "countries-visited-backend",
+  "version": "2023",
+  "description": "A collection of countries visited, including country name, date first visited, and number of times visited.",
+  "main": "countries-controller.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node countries-controller.mjs",
+    "server": "nodemon countries-controller.mjs",
+    "frontend": "npm run start --prefix frontend",
+    "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "author": "Daniel Grossberg",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "rest": "^2.0.0",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
